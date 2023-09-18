@@ -1,11 +1,11 @@
 import { StyledButton } from './style';
-import { ButtonProps } from './type';
+import { ButtonProps } from './types';
 
-export const Button = ({children, size, onClick}: ButtonProps) => {
-
+export const Button = ({ size = 'medium', ...props }: ButtonProps) => {
+  
   return (
-    <StyledButton onClick={onClick} size={size}>
-      {children}
+    <StyledButton size={size} {...props}>
+      {props.children}
     </StyledButton>
   );
 };

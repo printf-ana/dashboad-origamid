@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ButtonProps } from "./type";
+import { ButtonProps, buttonSizeMap } from "./types";
 
 
 export const StyledButton = styled.button<ButtonProps>`
@@ -9,14 +9,15 @@ export const StyledButton = styled.button<ButtonProps>`
    border-radius: var(--radius);
    transition: 0.1s;
    background: var(--color);
-   color: var(--color-dark);
-   padding: 0.75em 1.5em;
-   margin-bottom: 1rem;   
+   color: var(--color-dark);  
+   padding: ${({ size }) => size && buttonSizeMap[size].padding};
+   font-size: var(--font-size);
+   font-family: var(--font);
 
    :hover & :focus {
-   background: var(--color);
-   box-shadow: 0 0 0 3px var(--color-light), 0 0 0 4px var(--color);
-   outline: none;
+      background: var(--color);
+      box-shadow: 0 0 0 3px var(--color-light), 0 0 0 4px var(--color);
+      outline: none;
    }
 
    :active {

@@ -9,9 +9,7 @@ body {
 }
 
 body,
-input,
-textarea,
-button {
+textarea {
   font-size: var(--font-size);
   font-family: var(--font);
 }
@@ -38,12 +36,6 @@ li {
   margin-bottom: 0.5rem;
 }
 
-label {
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-input,
 textarea {
   display: block;
   border: 1px solid #ccc;
@@ -54,13 +46,6 @@ textarea {
   transition: 0.2s;
 }
 
-input[type='checkbox'] {
-  display: inline-block;
-  width: auto;
-  margin: 0 0.5rem 0 0;
-}
-
-input:focus,
 textarea:focus {
   outline: none;
   border-color: var(--color);
